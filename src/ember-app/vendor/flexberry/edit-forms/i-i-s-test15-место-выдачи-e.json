@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Место выдачи",
+  "name": "IISTest15МестоВыдачиE",
+  "className": "МестоВыдачиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test15-место-выдачи",
+      "modelProjection": "МестоВыдачиE"
+    }
+  ]
+}

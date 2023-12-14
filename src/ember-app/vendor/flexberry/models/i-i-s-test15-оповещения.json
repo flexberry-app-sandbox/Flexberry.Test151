@@ -1,0 +1,155 @@
+﻿{
+  "name": "IISTest15Оповещения",
+  "modelName": "i-i-s-test15-оповещения",
+  "className": "Оповещения",
+  "nameSpace": "IIS.Test15",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "описание",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказы",
+      "relatedTo": "i-i-s-test15-заказы",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "местоВыдачи",
+      "relatedTo": "i-i-s-test15-место-выдачи",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОповещенияE",
+      "modelName": "i-i-s-test15-оповещения",
+      "attrs": [
+        {
+          "name": "описание",
+          "caption": "Описание",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "КодЗаказа",
+          "lookupValueField": "кодЗаказа",
+          "relationName": "Заказы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодЗаказа",
+              "caption": "Код заказа",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Заказы",
+          "name": "заказы",
+          "relatedTo": "i-i-s-test15-заказы",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Адрес",
+          "lookupValueField": "адрес",
+          "relationName": "МестоВыдачи",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "Адрес",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Место выдачи",
+          "name": "местоВыдачи",
+          "relatedTo": "i-i-s-test15-место-выдачи",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ОповещенияL",
+      "modelName": "i-i-s-test15-оповещения",
+      "attrs": [
+        {
+          "name": "описание",
+          "caption": "Описание",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Заказы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодЗаказа",
+              "caption": "Код заказа",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код заказа",
+          "name": "заказы",
+          "relatedTo": "i-i-s-test15-заказы",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "МестоВыдачи",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "Адрес",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Адрес",
+          "name": "местоВыдачи",
+          "relatedTo": "i-i-s-test15-место-выдачи",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

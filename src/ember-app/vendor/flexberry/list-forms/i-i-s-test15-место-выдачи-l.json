@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-test15-место-выдачи-e",
+  "editForm": "i-i-s-test15-место-выдачи-e",
+  "external": false,
+  "caption": "Место выдачи",
+  "name": "IISTest15МестоВыдачиL",
+  "className": "МестоВыдачиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test15-место-выдачи",
+      "modelProjection": "МестоВыдачиL"
+    }
+  ]
+}

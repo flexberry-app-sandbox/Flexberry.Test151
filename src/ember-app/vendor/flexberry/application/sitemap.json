@@ -1,0 +1,81 @@
+﻿{
+  "applicationCaption": "Test15",
+  "applicationTitle": "Test15",
+  "items": [
+    {
+      "link": null,
+      "menuName": "создание",
+      "caption": "Создание",
+      "title": "Создание",
+      "children": [
+        {
+          "link": null,
+          "menuName": "справочники",
+          "caption": "Справочники",
+          "title": "Справочники",
+          "children": [
+            {
+              "link": "i-i-s-test15-место-выдачи-l",
+              "menuName": null,
+              "caption": "Место выдачи",
+              "title": "Место выдачи",
+              "children": null
+            },
+            {
+              "link": "i-i-s-test15-товары-l",
+              "menuName": null,
+              "caption": "Товары",
+              "title": "Товары",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "оповещение",
+          "caption": "Оповещение",
+          "title": "Оповещение",
+          "children": [
+            {
+              "link": "i-i-s-test15-оповещения-l",
+              "menuName": null,
+              "caption": "Оповещения",
+              "title": "Оповещения",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "оформление-заказа",
+          "caption": "Оформление Заказа",
+          "title": "Оформление Заказа",
+          "children": [
+            {
+              "link": "i-i-s-test15-контрагент-l",
+              "menuName": null,
+              "caption": "Контрагент",
+              "title": "Контрагент",
+              "children": null
+            },
+            {
+              "link": "i-i-s-test15-продавец-l",
+              "menuName": null,
+              "caption": "Продавец",
+              "title": "Продавец",
+              "children": null
+            },
+            {
+              "link": "i-i-s-test15-заказы-l",
+              "menuName": null,
+              "caption": "Заказы",
+              "title": "Заказы",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,117 @@
+﻿{
+  "name": "IISTest15Продавец",
+  "modelName": "i-i-s-test15-продавец",
+  "className": "Продавец",
+  "nameSpace": "IIS.Test15",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "имя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодПродавца",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отчество",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фамилия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПродавецE",
+      "modelName": "i-i-s-test15-продавец",
+      "attrs": [
+        {
+          "name": "кодПродавца",
+          "caption": "Код продавца",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПродавецL",
+      "modelName": "i-i-s-test15-продавец",
+      "attrs": [
+        {
+          "name": "кодПродавца",
+          "caption": "Код продавца",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

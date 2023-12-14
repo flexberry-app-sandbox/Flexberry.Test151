@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISTest15МестоВыдачи",
+  "modelName": "i-i-s-test15-место-выдачи",
+  "className": "МестоВыдачи",
+  "nameSpace": "IIS.Test15",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "МестоВыдачиE",
+      "modelName": "i-i-s-test15-место-выдачи",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "МестоВыдачиL",
+      "modelName": "i-i-s-test15-место-выдачи",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

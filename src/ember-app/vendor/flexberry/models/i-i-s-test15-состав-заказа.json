@@ -1,0 +1,98 @@
+﻿{
+  "name": "IISTest15СоставЗаказа",
+  "modelName": "i-i-s-test15-состав-заказа",
+  "className": "СоставЗаказа",
+  "nameSpace": "IIS.Test15",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "товары",
+      "relatedTo": "i-i-s-test15-товары",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказы",
+      "relatedTo": "i-i-s-test15-заказы",
+      "inverse": "составЗаказа"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставЗаказаE",
+      "modelName": "i-i-s-test15-состав-заказа",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Название",
+          "lookupValueField": "название",
+          "relationName": "Товары",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": true,
+              "index": 2
+            },
+            {
+              "name": "ценаЗаЕд",
+              "caption": "Цена за единицу",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Товары",
+          "name": "товары",
+          "relatedTo": "i-i-s-test15-товары",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

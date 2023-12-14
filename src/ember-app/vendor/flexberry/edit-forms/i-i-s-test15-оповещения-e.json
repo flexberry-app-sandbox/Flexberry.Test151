@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Заказы",
+      "projection": "ЗаказыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "МестоВыдачи",
+      "projection": "МестоВыдачиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Оповещения",
+  "name": "IISTest15ОповещенияE",
+  "className": "ОповещенияE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test15-оповещения",
+      "modelProjection": "ОповещенияE"
+    }
+  ]
+}
