@@ -26,13 +26,13 @@ export default Controller.extend({
               link: 'i-i-s-test15-место-выдачи-l',
               caption: i18n.t('forms.application.sitemap.создание.справочники.i-i-s-test15-место-выдачи-l.caption'),
               title: i18n.t('forms.application.sitemap.создание.справочники.i-i-s-test15-место-выдачи-l.title'),
-              icon: 'table',
+              icon: 'book',
               children: null
             }, {
               link: 'i-i-s-test15-товары-l',
               caption: i18n.t('forms.application.sitemap.создание.справочники.i-i-s-test15-товары-l.caption'),
               title: i18n.t('forms.application.sitemap.создание.справочники.i-i-s-test15-товары-l.title'),
-              icon: 'tasks',
+              icon: 'edit',
               children: null
             }]
           }, {
@@ -43,7 +43,7 @@ export default Controller.extend({
               link: 'i-i-s-test15-оповещения-l',
               caption: i18n.t('forms.application.sitemap.создание.оповещение.i-i-s-test15-оповещения-l.caption'),
               title: i18n.t('forms.application.sitemap.создание.оповещение.i-i-s-test15-оповещения-l.title'),
-              icon: 'book',
+              icon: 'chart line',
               children: null
             }]
           }, {
@@ -54,18 +54,19 @@ export default Controller.extend({
               link: 'i-i-s-test15-контрагент-l',
               caption: i18n.t('forms.application.sitemap.создание.оформление-заказа.i-i-s-test15-контрагент-l.caption'),
               title: i18n.t('forms.application.sitemap.создание.оформление-заказа.i-i-s-test15-контрагент-l.title'),
-              icon: 'folder open',
+              icon: 'folder',
               children: null
             }, {
               link: 'i-i-s-test15-продавец-l',
               caption: i18n.t('forms.application.sitemap.создание.оформление-заказа.i-i-s-test15-продавец-l.caption'),
               title: i18n.t('forms.application.sitemap.создание.оформление-заказа.i-i-s-test15-продавец-l.title'),
+              icon: 'file',
               children: null
             }, {
               link: 'i-i-s-test15-заказы-l',
               caption: i18n.t('forms.application.sitemap.создание.оформление-заказа.i-i-s-test15-заказы-l.caption'),
               title: i18n.t('forms.application.sitemap.создание.оформление-заказа.i-i-s-test15-заказы-l.title'),
-              icon: 'briefcase',
+              icon: 'address card',
               children: null
             }]
           }]
