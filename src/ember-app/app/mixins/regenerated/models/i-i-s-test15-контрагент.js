@@ -7,7 +7,7 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 export let Model = Mixin.create({
   имя: DS.attr('string'),
   кодКлиента: DS.attr('number'),
-  номер: DS.attr('number'),
+  номерТелефона: DS.attr('number'),
   отчество: DS.attr('string'),
   фамилия: DS.attr('string')
 });
@@ -26,8 +26,8 @@ export let ValidationRules = {
       validator('number', { allowString: true, integer: true }),
     ],
   },
-  номер: {
-    descriptionKey: 'models.i-i-s-test15-контрагент.validations.номер.__caption__',
+  номерТелефона: {
+    descriptionKey: 'models.i-i-s-test15-контрагент.validations.номерТелефона.__caption__',
     validators: [
       validator('ds-error'),
       validator('number', { allowString: true, allowBlank: true, integer: true }),
@@ -53,7 +53,7 @@ export let defineProjections = function (modelClass) {
     фамилия: attr('Фамилия', { index: 1 }),
     имя: attr('Имя', { index: 2 }),
     отчество: attr('Отчество', { index: 3 }),
-    номер: attr('Номер', { index: 4 })
+    номерТелефона: attr('Номер телефона', { index: 4 })
   });
 
   modelClass.defineProjection('КонтрагентL', 'i-i-s-test15-контрагент', {
@@ -61,6 +61,6 @@ export let defineProjections = function (modelClass) {
     фамилия: attr('Фамилия', { index: 1 }),
     имя: attr('Имя', { index: 2 }),
     отчество: attr('Отчество', { index: 3 }),
-    номер: attr('Номер', { index: 4 })
+    номерТелефона: attr('Номер телефона', { index: 4 })
   });
 };

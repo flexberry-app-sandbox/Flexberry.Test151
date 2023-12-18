@@ -29,6 +29,13 @@
     {
       "polymorphic": false,
       "presence": true,
+      "name": "местоВыдачи",
+      "relatedTo": "i-i-s-test15-место-выдачи",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
       "name": "товары",
       "relatedTo": "i-i-s-test15-товары",
       "inverse": "вНаличии"
@@ -53,7 +60,29 @@
           "index": 1
         }
       ],
-      "belongsTo": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "МестоВыдачи",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "В наличии по адресу",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "В наличии по адресу",
+          "name": "местоВыдачи",
+          "relatedTo": "i-i-s-test15-место-выдачи",
+          "inverse": null
+        }
+      ],
       "hasMany": []
     }
   ],

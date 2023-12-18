@@ -5,8 +5,8 @@
 
 CREATE TABLE СоставЗаказа (
  primaryKey UUID NOT NULL,
- Номер INT NOT NULL,
  Количество INT NULL,
+ Номер INT NOT NULL,
  Товары UUID NOT NULL,
  Заказы UUID NOT NULL,
  PRIMARY KEY (primaryKey));
@@ -14,11 +14,11 @@ CREATE TABLE СоставЗаказа (
 
 CREATE TABLE Заказы (
  primaryKey UUID NOT NULL,
+ Дата TIMESTAMP(3) NULL,
  КодЗаказа INT NOT NULL,
  Статус VARCHAR(9) NULL,
- Дата TIMESTAMP(3) NULL,
- Продавец UUID NOT NULL,
  Контрагент UUID NOT NULL,
+ Продавец UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -31,25 +31,26 @@ CREATE TABLE МестоВыдачи (
 CREATE TABLE Товары (
  primaryKey UUID NOT NULL,
  КодТовара INT NOT NULL,
- ЦенаЗаЕд DOUBLE PRECISION NULL,
  Название VARCHAR(255) NULL,
+ ЦенаЗаЕд DOUBLE PRECISION NULL,
  PRIMARY KEY (primaryKey));
 
 
 CREATE TABLE Контрагент (
  primaryKey UUID NOT NULL,
- КодКлиента INT NOT NULL,
- Фамилия VARCHAR(255) NULL,
  Имя VARCHAR(255) NULL,
+ КодКлиента INT NOT NULL,
+ НомерТелефона INT NULL,
  Отчество VARCHAR(255) NULL,
- Номер INT NULL,
+ Фамилия VARCHAR(255) NULL,
  PRIMARY KEY (primaryKey));
 
 
 CREATE TABLE ВНаличии (
  primaryKey UUID NOT NULL,
- Количество INT NULL,
  Дата TIMESTAMP(3) NULL,
+ Количество INT NULL,
+ МестоВыдачи UUID NOT NULL,
  Товары UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
@@ -64,10 +65,10 @@ CREATE TABLE Оповещения (
 
 CREATE TABLE Продавец (
  primaryKey UUID NOT NULL,
- КодПродавца INT NOT NULL,
- Фамилия VARCHAR(255) NULL,
  Имя VARCHAR(255) NULL,
+ КодПродавца INT NOT NULL,
  Отчество VARCHAR(255) NULL,
+ Фамилия VARCHAR(255) NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -181,11 +182,14 @@ CREATE INDEX Index520dc6fb052709fa98be456cfd592d7ef5fefff2 on СоставЗак
  ALTER TABLE СоставЗаказа ADD CONSTRAINT FK5d82b6739739c5570996630d124262b6b0d7fa39 FOREIGN KEY (Заказы) REFERENCES Заказы; 
 CREATE INDEX Index5d82b6739739c5570996630d124262b6b0d7fa39 on СоставЗаказа (Заказы); 
 
+ ALTER TABLE Заказы ADD CONSTRAINT FK5af76d2a6cc7a3980b13e176e17617ffd48f250e FOREIGN KEY (Контрагент) REFERENCES Контрагент; 
+CREATE INDEX Index5af76d2a6cc7a3980b13e176e17617ffd48f250e on Заказы (Контрагент); 
+
  ALTER TABLE Заказы ADD CONSTRAINT FK3e54c3f1c2feef6b514a03698e07d294e3ead1ac FOREIGN KEY (Продавец) REFERENCES Продавец; 
 CREATE INDEX Index3e54c3f1c2feef6b514a03698e07d294e3ead1ac on Заказы (Продавец); 
 
- ALTER TABLE Заказы ADD CONSTRAINT FK5af76d2a6cc7a3980b13e176e17617ffd48f250e FOREIGN KEY (Контрагент) REFERENCES Контрагент; 
-CREATE INDEX Index5af76d2a6cc7a3980b13e176e17617ffd48f250e on Заказы (Контрагент); 
+ ALTER TABLE ВНаличии ADD CONSTRAINT FKfa1ebb652edadc89804147fe5e52a2480561c8f1 FOREIGN KEY (МестоВыдачи) REFERENCES МестоВыдачи; 
+CREATE INDEX Indexfa1ebb652edadc89804147fe5e52a2480561c8f1 on ВНаличии (МестоВыдачи); 
 
  ALTER TABLE ВНаличии ADD CONSTRAINT FKc4efbe06046934fb7cb114380ad3299764c06431 FOREIGN KEY (Товары) REFERENCES Товары; 
 CREATE INDEX Indexc4efbe06046934fb7cb114380ad3299764c06431 on ВНаличии (Товары); 

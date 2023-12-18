@@ -33,13 +33,13 @@ namespace IIS.Test15
             "Фамилия as \'Фамилия\'",
             "Имя as \'Имя\'",
             "Отчество as \'Отчество\'",
-            "Номер as \'Номер\'"})]
+            "НомерТелефона as \'Номер телефона\'"})]
     [View("КонтрагентL", new string[] {
             "КодКлиента as \'Код клиента\'",
             "Фамилия as \'Фамилия\'",
             "Имя as \'Имя\'",
             "Отчество as \'Отчество\'",
-            "Номер as \'Номер\'"})]
+            "НомерТелефона as \'Номер телефона\'"})]
     public class Контрагент : ICSSoft.STORMNET.DataObject
     {
         
@@ -51,7 +51,7 @@ namespace IIS.Test15
         
         private string fОтчество;
         
-        private int fНомер;
+        private int fНомерТелефона;
         
         // *** Start programmer edit section *** (Контрагент CustomMembers)
 
@@ -123,33 +123,33 @@ namespace IIS.Test15
         }
         
         /// <summary>
-        /// Номер.
+        /// НомерТелефона.
         /// </summary>
-        // *** Start programmer edit section *** (Контрагент.Номер CustomAttributes)
+        // *** Start programmer edit section *** (Контрагент.НомерТелефона CustomAttributes)
 
-        // *** End programmer edit section *** (Контрагент.Номер CustomAttributes)
-        public virtual int Номер
+        // *** End programmer edit section *** (Контрагент.НомерТелефона CustomAttributes)
+        public virtual int НомерТелефона
         {
             get
             {
-                // *** Start programmer edit section *** (Контрагент.Номер Get start)
+                // *** Start programmer edit section *** (Контрагент.НомерТелефона Get start)
 
-                // *** End programmer edit section *** (Контрагент.Номер Get start)
-                int result = this.fНомер;
-                // *** Start programmer edit section *** (Контрагент.Номер Get end)
+                // *** End programmer edit section *** (Контрагент.НомерТелефона Get start)
+                int result = this.fНомерТелефона;
+                // *** Start programmer edit section *** (Контрагент.НомерТелефона Get end)
 
-                // *** End programmer edit section *** (Контрагент.Номер Get end)
+                // *** End programmer edit section *** (Контрагент.НомерТелефона Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Контрагент.Номер Set start)
+                // *** Start programmer edit section *** (Контрагент.НомерТелефона Set start)
 
-                // *** End programmer edit section *** (Контрагент.Номер Set start)
-                this.fНомер = value;
-                // *** Start programmer edit section *** (Контрагент.Номер Set end)
+                // *** End programmer edit section *** (Контрагент.НомерТелефона Set start)
+                this.fНомерТелефона = value;
+                // *** Start programmer edit section *** (Контрагент.НомерТелефона Set end)
 
-                // *** End programmer edit section *** (Контрагент.Номер Set end)
+                // *** End programmer edit section *** (Контрагент.НомерТелефона Set end)
             }
         }
         

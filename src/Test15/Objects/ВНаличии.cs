@@ -31,13 +31,16 @@ namespace IIS.Test15
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ВНаличииE", new string[] {
             "Количество as \'Количество\'",
-            "Дата as \'Дата\'"})]
+            "Дата as \'Дата\'",
+            "МестоВыдачи.Адрес as \'В наличии по адресу\'"})]
     public class ВНаличии : ICSSoft.STORMNET.DataObject
     {
         
         private int fКоличество;
         
         private System.DateTime fДата;
+        
+        private IIS.Test15.МестоВыдачи fМестоВыдачи;
         
         private IIS.Test15.Товары fТовары;
         
@@ -105,6 +108,40 @@ namespace IIS.Test15
                 // *** Start programmer edit section *** (ВНаличии.Количество Set end)
 
                 // *** End programmer edit section *** (ВНаличии.Количество Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Товары в наличии.
+        /// </summary>
+        // *** Start programmer edit section *** (ВНаличии.МестоВыдачи CustomAttributes)
+
+        // *** End programmer edit section *** (ВНаличии.МестоВыдачи CustomAttributes)
+        [PropertyStorage(new string[] {
+                "МестоВыдачи"})]
+        [NotNull()]
+        public virtual IIS.Test15.МестоВыдачи МестоВыдачи
+        {
+            get
+            {
+                // *** Start programmer edit section *** (ВНаличии.МестоВыдачи Get start)
+
+                // *** End programmer edit section *** (ВНаличии.МестоВыдачи Get start)
+                IIS.Test15.МестоВыдачи result = this.fМестоВыдачи;
+                // *** Start programmer edit section *** (ВНаличии.МестоВыдачи Get end)
+
+                // *** End programmer edit section *** (ВНаличии.МестоВыдачи Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (ВНаличии.МестоВыдачи Set start)
+
+                // *** End programmer edit section *** (ВНаличии.МестоВыдачи Set start)
+                this.fМестоВыдачи = value;
+                // *** Start programmer edit section *** (ВНаличии.МестоВыдачи Set end)
+
+                // *** End programmer edit section *** (ВНаличии.МестоВыдачи Set end)
             }
         }
         
