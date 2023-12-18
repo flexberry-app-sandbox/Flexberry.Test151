@@ -32,6 +32,7 @@ namespace IIS.Test15
     [View("ВНаличииE", new string[] {
             "Количество as \'Количество\'",
             "Дата as \'Дата\'",
+            "МестоВыдачи as \'Место выдачи\'",
             "МестоВыдачи.Адрес as \'В наличии по адресу\'"})]
     public class ВНаличии : ICSSoft.STORMNET.DataObject
     {

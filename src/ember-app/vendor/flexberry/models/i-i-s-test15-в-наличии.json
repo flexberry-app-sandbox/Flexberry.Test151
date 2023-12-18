@@ -72,12 +72,12 @@
               "name": "адрес",
               "caption": "В наличии по адресу",
               "hidden": false,
-              "index": 2
+              "index": 3
             }
           ],
-          "index": -1,
+          "index": 2,
           "type": "default",
-          "caption": "В наличии по адресу",
+          "caption": "Место выдачи",
           "name": "местоВыдачи",
           "relatedTo": "i-i-s-test15-место-выдачи",
           "inverse": null

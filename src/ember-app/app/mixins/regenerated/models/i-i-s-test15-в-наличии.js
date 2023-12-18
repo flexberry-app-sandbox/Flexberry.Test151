@@ -46,8 +46,8 @@ export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ВНаличииE', 'i-i-s-test15-в-наличии', {
     количество: attr('Количество', { index: 0 }),
     дата: attr('Дата', { index: 1 }),
-    местоВыдачи: belongsTo('i-i-s-test15-место-выдачи', 'В наличии по адресу', {
-      адрес: attr('В наличии по адресу', { index: 2 })
-    }, { index: -1, hidden: true })
+    местоВыдачи: belongsTo('i-i-s-test15-место-выдачи', 'Место выдачи', {
+      адрес: attr('В наличии по адресу', { index: 3 })
+    }, { index: 2 })
   });
 };

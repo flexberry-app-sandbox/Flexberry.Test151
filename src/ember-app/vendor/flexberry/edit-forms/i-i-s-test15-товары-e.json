@@ -1,5 +1,14 @@
 ﻿{
-  "propertyLookup": [],
+  "propertyLookup": [
+    {
+      "master": "местоВыдачи",
+      "displayAttributeName": null,
+      "required": true,
+      "relationName": "ВНаличии.МестоВыдачи",
+      "projection": "МестоВыдачиL",
+      "detailModelName": "i-i-s-test15-в-наличии"
+    }
+  ],
   "external": false,
   "caption": "Товары",
   "name": "IISTest15ТоварыE",
